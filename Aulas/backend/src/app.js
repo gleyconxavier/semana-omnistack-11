@@ -1,11 +1,13 @@
 const express = require('express');
 const cors = require('cors');
+const { errors } = require('celebrate');
 const routes = require('./routes');
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use(routes);
+app.use(errors());
 // Rotas / Recursos
 
 /*
@@ -34,10 +36,4 @@ app.use(routes);
  * Query Builder: table('users').select('*').where()
  */
 
-
-
-const port = 3333;
-
-app.listen(port, () => {
-  console.log("Servidor ON: Use Ctrl + click para acessar em: http://localhost:" + port);
-});
+module.exports = app;
