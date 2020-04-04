@@ -67,7 +67,6 @@ export default function Detail() {
                         <TouchableOpacity style={styles.action} onPress={sendWhatsapp}>
                             <Text style={styles.actionText}>Whatsapp</Text>
                         </TouchableOpacity>
-
                         <TouchableOpacity style={styles.action} onPress={sendMail}>
                             <Text style={styles.actionText}>E-mail</Text>
                         </TouchableOpacity>
